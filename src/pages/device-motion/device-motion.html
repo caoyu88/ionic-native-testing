@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>device-motion</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button full primary (click)="startWatching()">Start Watching</button>
+  <button ion-button full primary (click)="stopWatching()">Stop Watching</button>
+
+  <ion-card *ngIf="data">
+    <ion-card-header>
+      <h2>x: {{data.x | number:'1.4-4'}}</h2>
+      <h2>y: {{data.y | number:'1.4-4'}}</h2>
+      <h2>z: {{data.z | number:'1.4-4'}}</h2>
+    </ion-card-header>
+    <ion-card-content>
+      {{ data | json }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

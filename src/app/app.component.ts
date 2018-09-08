@@ -1,3 +1,7 @@
+import { DeviceMotionPage } from './../pages/device-motion/device-motion';
+import { BarcodeScannerPage } from './../pages/barcode-scanner/barcode-scanner';
+import { GeolocationPage } from './../pages/geolocation/geolocation';
+import { VibrationPage } from './../pages/vibration/vibration';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -40,5 +44,21 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  goToVibration() {
+    this.nav.push(VibrationPage);
+  }
+
+  goToGeolocation() {
+    this.nav.push(GeolocationPage);
+  }
+
+  goToBarcode() {
+    this.nav.push(BarcodeScannerPage);
+  }
+
+  goToDeviceMotion() {
+    this.nav.push(DeviceMotionPage);
   }
 }
